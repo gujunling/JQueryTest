@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery对象和JS对象的转换</title>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+
+            /*JS在页面加载完成后在执行下面代码的方式
+          window.onload = function () {
+              //给按钮添加单击事件
+              $("#b1").click(function () {
+                  alert("帅锅，你好啊");
+              });
+          }*/
+
+            /*jquery入口函数(dom文档加载完成之后执行该函数中的代码)*/
+            $(function () {
+                $("#b1").click(function () {
+                    alert("帅锅，你好啊");
+                });
+            });
+
+            /* function fun1(){
+           alert("abc");
+           }
+
+           function fun2(){
+               alert("bcd");
+           }
+           window.onload = fun1;
+           //window.onload = fun2;
+            */
+
+            /* $(function(){
+                 alert(123);
+             });
+
+             $(function(){
+                 alert(234);
+             });
+              */
+
+            $(function () {
+                // $("#div1").css("background-color","red");
+                $("#div1").css("backgroundColor", "pink");
+            });
+            /*
+                 window.onload  和 $(function) 区别
+                     * window.onload 只能定义一次,如果定义多次，后边的会将前边的覆盖掉
+                     * $(function)可以定义多次的。
+              */
+
+        </script>
+
+    </head>
+    <body>
+        <div id="div1"> div1啊啊啊啊</div>
+        <div id="div2"> div2啊啊啊啊</div>
+        <input type="button" id="b1" value="哈哈哈">
+
+    </body>
+</html>
